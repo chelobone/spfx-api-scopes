@@ -260,7 +260,7 @@ export default class GraphConsumer extends React.Component<IGraphConsumerProps, 
     
 
     this.props.context.graphHttpClient
-      .get("v1.0/sites/imagen.sharepoint.com,5467ed13-ab7f-40fb-b5e4-e570adac0785,f7852e05-c564-4801-856a-5c88760f5ade/lists/cb6ef9de-cf38-4507-80e6-92e9409b7858/items?expand=Descargable",
+      .get("v1.0/sites/{SITE_GUID}/lists/{LIBRARY_GUID}/items?expand=Descargable",
         GraphHttpClient.configurations.v1)
       .then((resp: HttpClientResponse) => {
         var response = resp.json();
